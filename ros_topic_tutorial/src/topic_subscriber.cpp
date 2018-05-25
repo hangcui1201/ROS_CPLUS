@@ -15,7 +15,7 @@ void msgCallback(const ros_topic_tutorial::MsgTopic::ConstPtr& msg){
     ROS_INFO("recieve msg = %d", msg->stamp.nsec);
 
     // Shows the 'data' message	 
-    ROS_INFO("recieve msg = %d", msg->data);		 
+    ROS_INFO("recieve msg = %d", msg->count);
 }
 
 int main(int argc, char **argv){

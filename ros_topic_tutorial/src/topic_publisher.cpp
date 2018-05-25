@@ -10,7 +10,7 @@ int main(int argc, char **argv){
     // node name: topic_publisher
     // publisher: ros_pub_topic
     // topic name: ros_msg_topic
-    // message file: MsgTopic.msg
+    // published message type: MsgTopic (MsgTopic.msg)
 
     // Initializes node name as "topic_publisher"
     ros::init(argc, argv, "topic_publisher");	
@@ -38,7 +38,7 @@ int main(int argc, char **argv){
         msg.stamp = ros::Time::now();	 
 
         // Save the the 'count' value in the data of 'msg'
-        msg.data = count;
+        msg.count = count;
  
         // Print the 'stamp.sec' message
         ROS_INFO("send msg = %d", msg.stamp.sec);	
@@ -47,7 +47,7 @@ int main(int argc, char **argv){
         ROS_INFO("send msg = %d", msg.stamp.nsec);
  
         // Print the 'data' message
-        ROS_INFO("send msg = %d", msg.data);
+        ROS_INFO("send msg = %d", msg.count);
  
         // Publishes 'msg' message
         ros_pub_topic.publish(msg);
