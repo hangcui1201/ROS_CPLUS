@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<package>
-  <name>ros_topic_tutorial</name>
+  <package>
+  <name>ros_service_tutorial</name>
   <version>1.0.0</version>
-  <description>The ros_topic_tutorial package</description>
+  <description>The ros_service_tutorial package</description>
   <license>MIT</license>
   <author email="cuihang1201@gmail.com">Hang Cui</author>
   <maintainer email="cuihang1201@gmail.com">Hang Cui</maintainer>
@@ -10,17 +10,11 @@
   <url type="repository">https://github.com/</url>
   <url type="website">http://www.personal.com</url>
   <buildtool_depend>catkin</buildtool_depend>
-  <build_depend>message_generation</build_depend>
   <build_depend>roscpp</build_depend>
   <build_depend>std_msgs</build_depend>
-  <run_depend>message_generation</run_depend>
+  <build_depend>message_generation</build_depend>
   <run_depend>roscpp</run_depend>
   <run_depend>std_msgs</run_depend>
-  <!-- 
-  <build_export_depend>roscpp</build_export_depend>
-  <build_export_depend>std_msgs</build_export_depend>
-  <exec_depend>roscpp</exec_depend>
-  <exec_depend>std_msgs</exec_depend>
-  -->
+  <run_depend>message_runtime</run_depend>
   <export></export>
 </package>
