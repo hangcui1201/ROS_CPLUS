@@ -13,4 +13,4 @@
 # $ roscore
 # $ rosrun ros_service_tutorial service_server
 # $ rqt
-# [Plugins] -> [Services] -> [Service Caller] -> Input a=10, b=11 -> Click "Call" button
+# [Plugins] -> [Services] -> [Service Caller] -> Input num_1=10, num_2=11 -> Click "Call" button

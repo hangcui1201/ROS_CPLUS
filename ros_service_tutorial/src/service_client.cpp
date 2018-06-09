@@ -30,13 +30,13 @@ int main(int argc, char **argv)
 	ros_service_tutorial::MsgService srv;
 
 	// Parameters entered when the node is executed as a service request value are stored at 'a' and 'b'
-	srv.request.a = atoll(argv[1]);
-	srv.request.b = atoll(argv[2]);
+	srv.request.num_1 = atoll(argv[1]);
+	srv.request.num_2 = atoll(argv[2]);
 
 	// Request the service. If the request is accepted, display the response value
 	if (ros_service_client.call(srv))
 	{
-		ROS_INFO("Send srv, srv.Request.a and b: %ld, %ld", (long int)srv.request.a, (long int)srv.request.b);
+		ROS_INFO("Send srv, srv.Request.num_1 and num_2: %ld, %ld", (long int)srv.request.num_1, (long int)srv.request.num_2);
 		ROS_INFO("Receive srv, srv.Response.result: %ld", (long int)srv.response.result);
 	}
 	else

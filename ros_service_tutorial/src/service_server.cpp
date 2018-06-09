@@ -8,11 +8,11 @@ bool calculationCallback(ros_service_tutorial::MsgService::Request &request,
 {
 	// The service name is 'ros_tutorial_srv' and 
     // it will call 'calculation' function upon the service request.
-	response.result = request.a + request.b;
+	response.result = request.num_1 + request.num_2;
 
-	// Displays 'a' and 'b' values used in the service request and
+	// Displays 'num_1' and 'num_2' values used in the service request and
 	// the 'result' value corresponding to the service response
-	ROS_INFO("request: x=%ld, y=%ld", (long int)request.a, (long int)request.b);
+	ROS_INFO("request: x=%ld, y=%ld", (long int)request.num_1, (long int)request.num_2);
 	ROS_INFO("sending back response: %ld", (long int)response.result);
 
 	return true;
