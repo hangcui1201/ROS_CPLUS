@@ -1,8 +1,8 @@
 #include "ros/ros.h"
 
-// MsgTopic Message File Header
+// TopicMessage Message File Header
 // The header file is automatically created when building the package
-#include "ros_topic_tutorial/MsgTopic.h"
+#include "ros_topic_tutorial/TopicMessage.h"
 
 int main(int argc, char **argv){
 
@@ -10,7 +10,7 @@ int main(int argc, char **argv){
     // node name: topic_publisher
     // publisher: ros_pub_topic
     // topic name: ros_msg_topic
-    // published message type: MsgTopic (MsgTopic.msg)
+    // published message type: TopicMessage (TopicMessage.msg)
 
     // Initializes node name as "topic_publisher"
     ros::init(argc, argv, "topic_publisher");	
@@ -18,17 +18,17 @@ int main(int argc, char **argv){
     // Node handle declaration for communication with ROS system
     ros::NodeHandle nh;		
 
-    // Declare publisher, create publisher 'ros_pub_topic' using the 'MsgTopic.msg
+    // Declare publisher, create publisher 'ros_pub_topic' using TopicMessage
     // The topic name is 'ros_msg_topic' and the size of the publisher queue is set to 100.
     ros::Publisher ros_pub_topic =
-	nh.advertise<ros_topic_tutorial::MsgTopic>("ros_msg_topic", 100);
+	nh.advertise<ros_topic_tutorial::TopicMessage>("ros_msg_topic", 100);
 
     // Set the loop period. '10' refers to 10 Hz
     // The main loop repeats at 0.1 second intervals
     ros::Rate loop_rate(10);
 
-    // Declares 'MsgTopic' message object 'msg'
-    ros_topic_tutorial::MsgTopic msg; 	
+    // Declares 'TopicMessage' message object 'msg'
+    ros_topic_tutorial::TopicMessage msg; 	
 							
     int count = 0;					
 

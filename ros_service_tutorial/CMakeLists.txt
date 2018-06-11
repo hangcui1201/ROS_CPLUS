@@ -57,7 +57,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## Service declaration: MsgService.srv
 add_service_files(
   FILES
-  MsgService.srv
+  ServiceMessage.srv
 #  Service1.srv
 #  Service2.srv
 )

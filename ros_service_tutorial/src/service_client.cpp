@@ -1,6 +1,6 @@
 #include "ros/ros.h"	
-// MsgService Service File Header (Automatically created after build)
-#include "ros_service_tutorial/MsgService.h"
+// ServiceMessage Service File Header (Automatically created after build)
+#include "ros_service_tutorial/ServiceMessage.h"
 // Library for using the "atoll" function
 #include <cstdlib>
 					 
@@ -13,21 +13,21 @@ int main(int argc, char **argv)
 	// input value error handling
 	if (argc != 3)				
 	{
-		ROS_INFO("cmd : rosrun ros_service_tutorial service_client arg0 arg1");
+		ROS_INFO("Command: rosrun ros_service_tutorial service_client arg0 arg1");
 		ROS_INFO("arg0: double number, arg1: double number");
-		return 1;
+		return 1; 
 	}
 
 	// Node handle declaration for communication with ROS system
 	ros::NodeHandle nh; 	
 
 	// Declares service client 'ros_service_client'
-	// Using the 'MsgService' service file in the 'ros_service_tutorial' package
+	// Use the 'ServiceMessage' service file in the 'ros_service_tutorial' package
 	// The service name is 'ros_service'
-	ros::ServiceClient ros_service_client = nh.serviceClient<ros_service_tutorial::MsgService>("ros_service");
+	ros::ServiceClient ros_service_client = nh.serviceClient<ros_service_tutorial::ServiceMessage>("ros_service");
 
 	// Declares the 'srv' service that uses the 'MsgService' service file
-	ros_service_tutorial::MsgService srv;
+	ros_service_tutorial::ServiceMessage srv;
 
 	// Parameters entered when the node is executed as a service request value are stored at 'a' and 'b'
 	srv.request.num_1 = atoll(argv[1]);

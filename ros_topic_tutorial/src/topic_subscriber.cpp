@@ -1,12 +1,12 @@
 #include "ros/ros.h"
 
-// MsgTutorial Message File Header
+// TopicMessage Message File Header
 // The header file is automatically created when building the package.
-#include "ros_topic_tutorial/MsgTopic.h"
+#include "ros_topic_tutorial/TopicMessage.h"
 
 // Message callback function. This is a function is called when a topic
 // message named 'ros_msg_topic' is received.
-void msgCallback(const ros_topic_tutorial::MsgTopic::ConstPtr& msg){
+void msgCallback(const ros_topic_tutorial::TopicMessage::ConstPtr& msg){
 
     // Shows the 'stamp.sec' message
     ROS_INFO("recieve msg = %d", msg->stamp.sec);	
@@ -24,7 +24,7 @@ int main(int argc, char **argv){
     // node name: topic_subscriber
     // subscriber: ros_sub_topic
     // topic name: ros_msg_topic
-    // message file: MsgTopic.msg
+    // message file: TopicMessage.msg
 
     // Initializes node name as "topic_subscriber"
     ros::init(argc, argv, "topic_subscriber"); 	
@@ -32,7 +32,8 @@ int main(int argc, char **argv){
     // Node handle declaration for communication with ROS system
     ros::NodeHandle nh; 	
 
-    // Declares subscriber. Create subscriber 'ros_sub_topic' using the MsgTopic.msg
+    // Declares subscriber. 
+    // Create subscriber 'ros_sub_topic' using the TopicMessage.msg
     ros::Subscriber ros_sub_topic = nh.subscribe("ros_msg_topic", 100, msgCallback);
 
     // A function for calling a callback function, waiting for a message to be
