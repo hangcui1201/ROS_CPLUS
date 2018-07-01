@@ -31,7 +31,6 @@ int main(int argc, char **argv)
 	// Use the 'ServiceMessage' service file in the 'ros_service_tutorial' package
 	// The service name is 'ros_service' and it will call 'calculationCallback' function
 	// upon the service request.
-
 	ros::ServiceServer ros_service_server = nh.advertiseService("ros_service", calculationCallback);
 
     // Print if the service server is ready
