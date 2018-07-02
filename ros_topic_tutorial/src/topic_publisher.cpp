@@ -1,5 +1,4 @@
 #include "ros/ros.h"
-
 // TopicMessage Message File Header
 // The header file is automatically created when building the package
 #include "ros_topic_tutorial/TopicMessage.h"
