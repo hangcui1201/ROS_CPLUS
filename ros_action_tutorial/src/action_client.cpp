@@ -2,6 +2,7 @@
 #include <actionlib/client/simple_action_client.h> 	 // action library header file
 #include <actionlib/client/terminal_state.h> 	     // action goal status header file
 #include <ros_action_tutorial/FibonacciAction.h>	 // FibonacciAction action file header
+#include <string>
 
 // Node Main Function
 int main (int argc, char **argv) 			 
@@ -36,7 +37,7 @@ int main (int argc, char **argv)
 	{
 		// Receive action target status value and display on screen
 		actionlib::SimpleClientGoalState state = ac.getState();
-		ROS_INFO("Action finished: %s",state.toString().c_str());
+		ROS_INFO("Action finished: %s", state.toString().c_str());
 	}
 	else
 	{

@@ -36,8 +36,8 @@ int main(int argc, char **argv)
 	// Request the service. If the request is accepted, display the response value
 	if (ros_service_client.call(srv))
 	{
-		ROS_INFO("Send srv, srv.Request.num_1 and num_2: %ld, %ld", (long int)srv.request.num_1, (long int)srv.request.num_2);
-		ROS_INFO("Receive srv, srv.Response.result: %ld", (long int)srv.response.result);
+		ROS_INFO("Send service, srv.Request.num_1 and srv.Request.num_2: %ld, %ld", (long int)srv.request.num_1, (long int)srv.request.num_2);
+		ROS_INFO("Receive service, srv.Response.result: %ld", (long int)srv.response.result);
 	}
 	else
 	{

@@ -2,7 +2,7 @@
 #include <actionlib/server/simple_action_server.h>	 // action library header file
 #include <ros_action_tutorial/FibonacciAction.h> 	 // FibonacciAction action file header
 
-class FibonacciAction
+class FibonacciClass
 {
 	protected:
 
@@ -22,17 +22,17 @@ class FibonacciAction
 	public:
 	
 		// Initialize action server (Node handle, action name, action callback function)
-		FibonacciAction(std::string name) : as_(nh_, name, boost::bind(&FibonacciAction::executeCB, this, _1), false),
+		FibonacciClass(std::string name) : as_(nh_, name, boost::bind(&FibonacciClass::goal_callback, this, _1), false),
                                             action_name_(name)
 		{
 			as_.start();
 		}
 
-		~FibonacciAction(void){}
+		~FibonacciClass(void){}
 
 		// A function that receives an action goal message and performs a specified
 		// action (in this example, a Fibonacci calculation)
-		void executeCB(const ros_action_tutorial::FibonacciGoalConstPtr &goal)
+		void goal_callback(const ros_action_tutorial::FibonacciGoalConstPtr &goal)
 		{
 			// Loop Rate: 1Hz
 			ros::Rate r(1);
@@ -75,7 +75,7 @@ class FibonacciAction
 				// Publish feedback
 				as_.publishFeedback(feedback_);	
 
-				// sleep according to the defined loop rate	 
+				// Sleep according to the defined loop rate	 
 				r.sleep();					 
 
 			}
@@ -100,7 +100,7 @@ int main(int argc, char** argv)
 
 	// Initializes Node Name
 	// Fibonacci Declaration(Action Name: ros_action_tutorial)
-	FibonacciAction fibonacci("ros_action_tutorial");
+	FibonacciClass fibonacci("ros_action_tutorial");
 
 	ros::spin();					
 	

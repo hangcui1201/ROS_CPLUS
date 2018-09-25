@@ -1,16 +1,31 @@
-# $ roscore
-# $ rosrun ros_service_tutorial service_server
-# $ rosrun ros_service_tutorial service_client 10 11
+#### Open the first terminal  
 
-# or
+$ cd ~/catkin_basic_py  
+$ catkin_make  
+$ source devel/setup.bash  
+$ roscore  
 
-# $ roscore
-# $ rosrun ros_service_tutorial service_server
-# $ rosservice call /ros_service 10 11
+#### Open a second terminal  
 
-# or
+$ cd ~/catkin_basic_py  
+$ source devel/setup.bash  
+$ rosrun ros_service_tutorial service_server
 
-# $ roscore
-# $ rosrun ros_service_tutorial service_server
-# $ rqt
-# [Plugins] -> [Services] -> [Service Caller] -> Input num_1=10, num_2=11 -> Click "Call" button
+#### Open a third terminal  
+
+$ cd ~/catkin_basic_py  
+$ source devel/setup.bash  
+$ rosrun ros_service_tutorial service_client 11 12  
+
+or  
+
+$ roscore  
+$ rosrun ros_service_tutorial service_server  
+$ rosservice call /ros_service 11 12  
+
+or  
+
+$ roscore  
+$ rosrun ros_service_tutorial service_server  
+$ rqt  
+$ [Plugins] -> [Services] -> [Service Caller] -> Input num_1=10, num_2=11 -> Click "Call" button

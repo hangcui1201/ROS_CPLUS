@@ -1,16 +1,25 @@
-# To Run this package and nodes
+#### Open the first terminal  
 
-Put 'ros_topic_tutorial' folder under the 'src' folder of catkin workspace
+$ cd ~/catkin_basic_py  
+$ catkin_make  
+$ source devel/setup.bash  
+$ roscore  
 
->> cd 'catkin_workspace'
->> catkin_make
->> source devel/setup.bash
->> roscore
->> rosrun ros_topic_tutorial topic_publisher
->> rosrun ros_topic_tutorial topic_subscriber
+#### Open a second terminal  
+
+$ cd ~/catkin_basic_py  
+$ source devel/setup.bash
+$ rosrun ros_topic_tutorial topic_publisher  
+
+
+#### Open a third terminal  
+
+$ cd ~/catkin_basic_py  
+$ source devel/setup.bash
+$ rosrun ros_topic_tutorial topic_subscriber  
 
 or
 
->> roslaunch ros_topic_tutorial ros_topic.launch --screen
->> rosnode list
->> rosrun rqt_graph rqt_graph
+$ roslaunch ros_topic_tutorial ros_topic.launch --screen  
+$ rosnode list  
+$ rosrun rqt_graph rqt_graph  
