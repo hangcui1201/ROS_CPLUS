@@ -81,7 +81,7 @@ int main(int argc, char **argv)
 	// 10hz
 	ros::Rate r(10);		
 	
-	while (1)
+	while (ros::ok())
 	{
 		// Select the operator according to the value received from the parameter
 		// Get the parameter value from calculation_method
