@@ -49,7 +49,17 @@ $ [Plugins] -> [Services] -> [Service Caller] -> Input num_1=10, num_2=11 -> Cli
 
 ### Lesson 3: ROS Action Tutorial
 
+#### Terminal 1
+$ source devel/setup.bash  
+$ roscore  
 
+#### Terminal 2
+$ source devel/setup.bash  
+$ rosrun ros_action_tutorial action_server  
+
+#### Terminal 3
+$ source devel/setup.bash  
+$ rosrun ros_action_tutorial action_client   
 
 
 ### Lesson 4: ROS Parameters Tutorial
