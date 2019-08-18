@@ -6,9 +6,9 @@
   <license>MIT</license>
   <author email="cuihang1201@gmail.com">Hang Cui</author>
   <maintainer email="cuihang1201@gmail.com">Hang Cui</maintainer>
-  <url type="bugtracker">https://github.com/</url>
-  <url type="repository">https://github.com/</url>
-  <url type="website">http://www.personal.com</url>
+  <url type="bugtracker">https://https://github.com/hangcui1201/ROS_CPLUS/</url>
+  <url type="repository">https://https://github.com/hangcui1201/ROS_CPLUS/</url>
+  <url type="website">https://https://github.com/hangcui1201/ROS_CPLUS/</url>
   <buildtool_depend>catkin</buildtool_depend>
   <build_depend>roscpp</build_depend>
   <build_depend>std_msgs</build_depend>
