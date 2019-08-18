@@ -1,10 +1,106 @@
-# ROS Basic Tutorials (C++)
+## ROS Basic Tutorials (C++)
 
-# Lesson 1: ROS Topic Tutorial
+### Lesson 1: ROS Topic Tutorial
 
-# Lesson 2: ROS Service Tutorial
+#### Terminal 1
+$ source devel/setup.bash  
+$ roscore  
 
-# Lesson 3: ROS Action Tutorial
+#### Terminal 2
+$ source devel/setup.bash
+$ rosrun ros_topic_tutorial topic_publisher  
 
-# Lesson 4: ROS Parameters Tutorial
+#### Terminal 3
+$ source devel/setup.bash
+$ rosrun ros_topic_tutorial topic_subscriber  
+
+#### Alternative
+$ roslaunch ros_topic_tutorial ros_topic.launch --screen  
+$ rosnode list  
+$ rosrun rqt_graph rqt_graph  
+
+
+### Lesson 2: ROS Service Tutorial
+
+#### Terminal 1
+$ source devel/setup.bash  
+$ roscore  
+
+#### Terminal 2
+$ source devel/setup.bash  
+$ rosrun ros_service_tutorial service_server
+
+#### Terminal 3
+$ source devel/setup.bash  
+$ rosrun ros_service_tutorial service_client 11 12  
+
+#### Alternative 1
+$ source devel/setup.bash  
+$ roscore  
+$ rosrun ros_service_tutorial service_server  
+$ rosservice call /ros_service 11 12  
+ 
+#### Alternative 2
+$ source devel/setup.bash  
+$ roscore  
+$ rosrun ros_service_tutorial service_server  
+$ rqt  
+$ [Plugins] -> [Services] -> [Service Caller] -> Input num_1=10, num_2=11 -> Click "Call" button
+
+### Lesson 3: ROS Action Tutorial
+
+
+
+
+### Lesson 4: ROS Parameters Tutorial
+
+#### Terminal 1
+$ source devel/setup.bash  
+$ roscore
+
+#### Terminal 2
+$ source devel/setup.bash  
+$ rosrun ros_parameter_tutorial service_param_server
+
+#### Terminal 3
+
+$ rosservice list
+$ rosservice call /ros_service_param 10 5
+
+$ rosparam set /calculation_method 2
+$ rosservice call /ros_service_param 10 5
+
+$ rosparam set /calculation_method 3
+$ rosservice call /ros_service_param 10 5
+
+$ rosparam set /calculation_method 4
+$ rosservice call /ros_service_param 10 5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
