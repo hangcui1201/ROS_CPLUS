@@ -7,11 +7,11 @@ $ source devel/setup.bash
 $ roscore  
 
 #### Terminal 2
-$ source devel/setup.bash
+$ source devel/setup.bash  
 $ rosrun ros_topic_tutorial topic_publisher  
 
 #### Terminal 3
-$ source devel/setup.bash
+$ source devel/setup.bash  
 $ rosrun ros_topic_tutorial topic_subscriber  
 
 #### Alternative
@@ -28,7 +28,7 @@ $ roscore
 
 #### Terminal 2
 $ source devel/setup.bash  
-$ rosrun ros_service_tutorial service_server
+$ rosrun ros_service_tutorial service_server  
 
 #### Terminal 3
 $ source devel/setup.bash  
@@ -56,25 +56,25 @@ $ [Plugins] -> [Services] -> [Service Caller] -> Input num_1=10, num_2=11 -> Cli
 
 #### Terminal 1
 $ source devel/setup.bash  
-$ roscore
+$ roscore  
 
 #### Terminal 2
 $ source devel/setup.bash  
-$ rosrun ros_parameter_tutorial service_param_server
+$ rosrun ros_parameter_tutorial service_param_server  
 
 #### Terminal 3
 
-$ rosservice list
-$ rosservice call /ros_service_param 10 5
+$ rosservice list  
+$ rosservice call /ros_service_param 10 5  
 
-$ rosparam set /calculation_method 2
-$ rosservice call /ros_service_param 10 5
+$ rosparam set /calculation_method 2  
+$ rosservice call /ros_service_param 10 5  
 
-$ rosparam set /calculation_method 3
-$ rosservice call /ros_service_param 10 5
+$ rosparam set /calculation_method 3  
+$ rosservice call /ros_service_param 10 5  
 
-$ rosparam set /calculation_method 4
-$ rosservice call /ros_service_param 10 5
+$ rosparam set /calculation_method 4  
+$ rosservice call /ros_service_param 10 5  
 
 
 
