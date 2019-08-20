@@ -90,6 +90,16 @@ $ rosservice call /ros_service_param 10 5
 $ rosparam set /calculation_method 4  
 $ rosservice call /ros_service_param 10 5  
 
+### Lesson 5: ROS Image Tutorial
+
+#### Terminal 1
+$ source devel/setup.bash  
+$ roslaunch usb_cam usb_cam.launch
+
+#### Terminal 2
+$ source devel/setup.bash  
+$ rosrun ros_image_tutorial image_pub_sub
+
 
 
 
