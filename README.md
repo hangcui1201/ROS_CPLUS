@@ -1,4 +1,4 @@
-## ROS Basic Tutorials (C++)
+## ROS Tutorials (C++)
 
 ### Lesson 1: ROS Topic Tutorial
 
