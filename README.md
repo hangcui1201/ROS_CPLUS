@@ -20,6 +20,7 @@ $ rosnode list
 $ rosrun rqt_graph rqt_graph  
 
 
+
 ### Lesson 2: ROS Service Tutorial
 
 #### Terminal 1
@@ -47,6 +48,8 @@ $ rosrun ros_service_tutorial service_server
 $ rqt  
 $ [Plugins] -> [Services] -> [Service Caller] -> Input num_1=10, num_2=11 -> Click "Call" button
 
+
+
 ### Lesson 3: ROS Action Tutorial
 
 #### Terminal 1
@@ -60,6 +63,7 @@ $ rosrun ros_action_tutorial action_server
 #### Terminal 3
 $ source devel/setup.bash  
 $ rosrun ros_action_tutorial action_client   
+
 
 
 ### Lesson 4: ROS Parameters Tutorial
@@ -90,6 +94,8 @@ $ rosservice call /ros_service_param 10 5
 $ rosparam set /calculation_method 4  
 $ rosservice call /ros_service_param 10 5  
 
+
+
 ### Lesson 5: ROS Image Tutorial
 
 #### Terminal 1
@@ -101,6 +107,20 @@ $ source devel/setup.bash
 $ rosrun ros_image_tutorial image_pub_sub
 
 
+
+### Lesson 6: ROS Navigation Tutorial
+
+#### Terminal 1
+$ source devel/setup.bash  
+$ roslaunch turtlebot3_gazebo turtlebot3_house.launch  
+
+#### Terminal 2
+$ source devel/setup.bash  
+$ roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=/home/hang/ros/tb3_house_map.yaml  
+
+#### Terminal 3
+$ source devel/setup.bash  
+$ rosrun ros_navigation_tutorial nav_goal  
 
 
 
