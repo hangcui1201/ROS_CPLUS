@@ -124,6 +124,23 @@ $ rosrun ros_navigation_tutorial nav_goal
 
 
 
+### Lesson 7: ROS 2D Laser Tutorial
+
+[HLS LFCD LDS 2D LASER DRIVER](https://github.com/ROBOTIS-GIT/hls_lfcd_lds_driver/tree/kinetic-devel)  
+
+#### Terminal 1
+
+$ source devel/setup.bash  
+$ roslaunch hls_lfcd_lds_driver hlds_laser.launch  
+
+#### Terminal 2
+
+$ source devel/setup.bash  
+$ roslaunch ros_2d_laser_tutorial tf_scan.launch  
+
+#### Terminal 3
+$ source devel/setup.bash  
+$ rosrun ros_2d_laser_tutorial laserscan_sub  
 
 
 

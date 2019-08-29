@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>ros_2d_laser_tutorial</name>
+  <version>0.0.0</version>
+  <description>The ros_2d_laser_tutorial package</description>
+  <license>MIT</license>
+  <author email="cuihang1201@gmail.com">Hang Cui</author>
+  <maintainer email="cuihang1201@gmail.com">Hang Cui</maintainer>
+  <url type="bugtracker">https://github.com/hangcui1201/ROS_CPLUS</url>
+  <url type="repository">https://github.com/hangcui1201/ROS_CPLUS</url>
+  <url type="website">https://github.com/hangcui1201/ROS_CPLUS</url>
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_export_depend>roscpp</build_export_depend>
+  <build_export_depend>sensor_msgs</build_export_depend>
+  <build_export_depend>std_msgs</build_export_depend>
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+    <!-- Other tools can request additional information be placed here -->
+  </export>
+</package>
